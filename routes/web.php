@@ -14,11 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return 'Halo zazero!';
+    return view('home'); // Diperbarui
 });
-Route::get('/halo', function () {
-    return '<h1>Bye, Zazero!</h1>';
-    });
-    Route::get('/bull', function () {
-        return '<h1>hi, dimar!</h1>';
-        });
