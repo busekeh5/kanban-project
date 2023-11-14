@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +17,13 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home'); // Diperbarui
 });
+
+Route::get('tasks', [TaskController::class,'index'])->name('tasks.index');
+Route::get('/', function () {
+
+    return view('home');
+
+})->name('home'); // name ditambahkan
+
+
+Route::get('/tasks/', [TaskController::class, 'index'])->name('tasks.index'); // name ditambahkan
